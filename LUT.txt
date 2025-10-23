@@ -1,0 +1,17 @@
+Käyttäjätiedot
+Nimi:
+Teemu Inkala 
+Käyttäjätunnus:
+x120478 
+Kirjautumistunnus:
+Teemu.Inkala@student.lut.fi 
+HAKA-ID:
+x120478@lut.fi 
+Sähköpostiosoite:
+Teemu.Inkala@student.lut.fi 
+Rooli:
+LUT-student 
+Voimassa asti:
+2026-08-04 
+
+Hello,_world!123
