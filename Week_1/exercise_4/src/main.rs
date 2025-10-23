@@ -13,7 +13,7 @@ fn main() {
                 println!("Jackpot!!!");
                 break;
             }
-            _ => println!("Uncovered")
+            _ => println!("Uncovered"),
         }
     }
     println!("{}", measure_luck(counter));
