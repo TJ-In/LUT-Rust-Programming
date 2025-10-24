@@ -1,0 +1,52 @@
+mod map;
+use map::arraymap::*;
+use std::io;
+
+fn main() {
+    let _ = create_map();
+    let mut x = (2, 2);
+    draw_map(x);
+    loop {
+        println!("| w) Move up | a) Move left | s) Move down | d) Move right | e) End program |");
+        let mut input = String::new();
+        io::stdin()
+            .read_line(&mut input)
+            .expect("Failed to read user input.");
+        match input.trim() {
+            "w" => {
+                if x.0 > 0 {
+                    x.0 -= 1;
+                } else {
+                    out_of_bounds();
+                }
+            }
+            "a" => {
+                if x.1 > 0 {
+                    x.1 -= 1;
+                } else {
+                    out_of_bounds();
+                }
+            }
+            "s" => {
+                if x.0 < 4 {
+                    x.0 += 1;
+                } else {
+                    out_of_bounds();
+                }
+            }
+            "d" => {
+                if x.1 < 4 {
+                    x.1 += 1;
+                } else {
+                    out_of_bounds();
+                }
+            }
+            "e" => { println!("Ending the program."); break; },
+            _ => println!("Invalid input."),
+        }
+        draw_map(x);
+    }
+}
+fn out_of_bounds() {
+    println!("Can't move out of the map");
+}
